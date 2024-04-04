@@ -2,6 +2,7 @@ package com.example.ciclodevida
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -46,7 +47,12 @@ class MainActivity : ComponentActivity() {
         Log.d(TAG,"He llegado al Resume")
     }
 
-
+    override fun onPause() {
+        super.onPause()
+        timeFinish=System.currentTimeMillis()
+        timePassed+=((timeFinish-timeStart)*0.001).toLong()
+        Log.d(TAG,"Tiempo que ha estado en ejecucion: "+timePassed+" segundos")
+    }
 }
 
 
