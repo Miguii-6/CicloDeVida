@@ -6,12 +6,12 @@ tiempo que la actividad ha estado activa cada vez que entra en pausa.
 ### Funcionalidades:
 
 1. **Registro de Ciclo de Vida:** La aplicación registra mensajes en el Logcat para cada uno de los eventos del ciclo
-   de vida de la `Activity`, como `onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`, y `onDestroy()`.
+   de vida de la `Activity`, como `onCreate()`, `onStart()`, `onResume()`, `onPause()`.
 - `onResume`
 
 ![Resume](./Imagenes/img2.png)
 
-- `onPause()`
+- `updateUI()`
 
 ![Pause](./Imagenes/img3.png)
 

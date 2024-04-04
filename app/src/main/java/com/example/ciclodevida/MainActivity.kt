@@ -45,6 +45,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         Log.d(TAG,"He llegado al Resume")
+        updateUI()
     }
 
     override fun onPause() {
@@ -52,6 +53,10 @@ class MainActivity : ComponentActivity() {
         timeFinish=System.currentTimeMillis()
         timePassed+=((timeFinish-timeStart)*0.001).toLong()
         Log.d(TAG,"Tiempo que ha estado en ejecucion: "+timePassed+" segundos")
+    }
+
+    fun updateUI(){
+        Toast.makeText(this,"Tiempo que has estado activo: $timePassed segundos",Toast.LENGTH_SHORT).show()
     }
 }
 
