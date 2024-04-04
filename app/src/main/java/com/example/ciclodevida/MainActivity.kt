@@ -40,6 +40,13 @@ class MainActivity : ComponentActivity() {
         timeStart=System.currentTimeMillis()
         Log.d(TAG,"He llegado al Start")
     }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG,"He llegado al Resume")
+    }
+
+
 }
 
 
