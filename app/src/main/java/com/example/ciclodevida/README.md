@@ -43,6 +43,10 @@ el usuario vea el tiempo transcurrido.
 
 ![Stop](./Imagenes/img_5.png)
 
+- `onDestroy()` 
+Se llama justo antes de que la actividad sea destruida y liberada de la memoria del sistema.
+
+![Destroy](./Imagenes/img_6.png)
 
 ## Autor Miguel Mariño Martinez
 

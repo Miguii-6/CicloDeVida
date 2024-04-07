@@ -60,6 +60,11 @@ class MainActivity : ComponentActivity() {
         Log.d(TAG,"He llegado al Stop o se ha pausado")
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG,"He llegado al estado de mi destrucción")
+    }
+
     fun updateUI(){
         Toast.makeText(this,"Tiempo que has estado activo: $timePassed segundos",Toast.LENGTH_SHORT).show()
     }
