@@ -38,5 +38,11 @@ el usuario vea el tiempo transcurrido.
 ![Pause](./Imagenes/img_3.png)
 ![PauseLog](./Imagenes/img_4.png)
 
+- `onStop()`
+  Se llama cuando la actividad ya no es visible para el usuario o entra en segundo plano.
+
+![Stop](./Imagenes/img_5.png)
+
+
 ## Autor Miguel Mariño Martinez
 

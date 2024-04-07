@@ -50,14 +50,21 @@ class MainActivity : ComponentActivity() {
 
     override fun onPause() {
         super.onPause()
-        timeFinish=System.currentTimeMillis()
-        timePassed+=((timeFinish-timeStart)*0.001).toLong()
+        timeFinish = System.currentTimeMillis()
+        timePassed += ((timeFinish - timeStart) *0.001).toLong()
         Log.d(TAG,"Tiempo que ha estado en ejecucion: "+timePassed+" segundos")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG,"He llegado al Stop o se ha pausado")
     }
 
     fun updateUI(){
         Toast.makeText(this,"Tiempo que has estado activo: $timePassed segundos",Toast.LENGTH_SHORT).show()
     }
+
+
 }
 
 
@@ -68,12 +75,4 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         text = "Hello $name!",
         modifier = modifier
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CicloDeVidaTheme {
-        Greeting("Android")
-    }
 }
